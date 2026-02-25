@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail Statistique FSSM 2024-2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        arabic: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.6); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col justify-center items-center bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-slate-50 relative overflow-hidden">
+    
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-200 opacity-50 mix-blend-multiply filter blur-3xl z-0"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-blue-200 opacity-50 mix-blend-multiply filter blur-3xl z-0"></div>
+
+    <main class="w-full max-w-4xl px-6 relative z-10 py-12">
+        <div class="text-center mb-12">
+            <div class="inline-flex items-center justify-center p-4 bg-white rounded-full shadow-md mb-6 border border-slate-100">
+                <i class="fa-solid fa-graduation-cap text-brand-600 text-3xl"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-display font-extrabold mb-4 text-slate-800">
+                Portail des Données <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-400">FSSM</span>
+            </h1>
+            <p class="text-lg text-slate-600 font-light max-w-2xl mx-auto">
+                Accédez aux différents rapports statistiques et d'infrastructures de la Faculté des Sciences Semlalia pour la période 2024-2026.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Link to Main Dashboard -->
+            <a href="Tableau_de_Bord_FSSM.html" class="glass-card flex flex-col items-center text-center p-8 rounded-3xl hover-lift border-t-4 border-t-brand-500 group cursor-pointer decoration-transparent">
+                <div class="w-20 h-20 rounded-full bg-brand-50 flex items-center justify-center text-brand-500 text-3xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h2 class="text-2xl font-display font-bold text-slate-800 mb-3">Synthèse Globale (Personnel & Étudiants)</h2>
+                <p class="text-slate-500 mb-6 flex-grow">
+                    Évolution des indicateurs macro : parité du personnel, répartition des effectifs étudiants et aperçu général des capacités physiques.
+                </p>
+                <div class="text-brand-600 font-semibold group-hover:text-brand-700 flex items-center">
+                    Consulter le tableau de bord <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+            <!-- Link to Infrastructure Detail -->
+            <a href="Bilan_Detaille_Infrastructures.html" class="glass-card flex flex-col items-center text-center p-8 rounded-3xl hover-lift border-t-4 border-t-blue-500 group cursor-pointer decoration-transparent">
+                <div class="w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 text-3xl mb-6 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <h2 class="text-2xl font-display font-bold text-slate-800 mb-3">Détail Exhaustif des Infrastructures</h2>
+                <p class="text-slate-500 mb-6 flex-grow text-sm">
+                    Relevé détaillé <span class="font-arabic" dir="rtl">(البنايات التربوية والبحث العلمي)</span> : salles B1, G2, TP/TD, Amphis et tous les laboratoires de la recherche scientifique.
+                </p>
+                <div class="text-blue-600 font-semibold group-hover:text-blue-700 flex items-center">
+                    Consulter l'archive détaillée <i class="fa-solid fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+        </div>
+
+    </main>
+    
+    <footer class="mt-8 text-center text-slate-400 text-sm relative z-10 pd-8">
+        Faculté des Sciences Semlalia, Université Cadi Ayyad de Marrakech.
+    </footer>
+
+</body>
+</html>

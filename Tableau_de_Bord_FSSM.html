@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilan et Synthèse FSSM 2024-2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.6); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
+        .gradient-text { background: linear-gradient(135deg, #15803d 0%, #22c55e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-pattern { background-image: radial-gradient(#22c55e 1px, transparent 1px); background-size: 30px 30px; background-position: 0 0, 15px 15px; background-color: #f0fdf4; opacity: 0.8; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-brand-900 text-white pb-24 pt-16">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-6 ring-1 ring-white/20 backdrop-blur-sm">
+                <i class="fa-solid fa-chart-line text-brand-100 text-xl mr-3"></i>
+                <span class="text-brand-50 font-medium tracking-wide">Université Cadi Ayyad</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold mb-6 leading-tight">
+                Faculté des Sciences<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-100 to-emerald-300">Semlalia Marrakech</span>
+            </h1>
+            <p class="text-xl text-brand-100 max-w-2xl mx-auto font-light leading-relaxed">
+                Synthèse exhaustive des capacités d'accueil, du personnel et des effectifs étudiants pour les années universitaires 2024-2025 et 2025-2026.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 -mt-16 relative z-20 flex-grow pb-24">
+        
+        <!-- Quick Stats Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1 duration-300 border-l-4 border-l-blue-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Étudiants (25/26)</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">12,296</h3>
+                        <p class="text-xs text-emerald-600 mt-2 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i> +8% vs 24/25.</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 text-2xl shadow-inner">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1 duration-300 border-l-4 border-l-brand-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Corps Professoral (25/26)</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">261</h3>
+                        <p class="text-xs text-red-500 mt-2 font-medium"><i class="fa-solid fa-arrow-trend-down mr-1"></i> -32 vs 24/25.</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 text-2xl shadow-inner">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1 duration-300 border-l-4 border-l-amber-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Capacité Globale (25/26)</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">14,964</h3>
+                        <p class="text-xs text-emerald-600 mt-2 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i> +6,452 places TP/TD.</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center text-amber-500 text-2xl shadow-inner">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Section Étudiants -->
+            <div class="glass-card rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-display font-bold text-slate-800">Effectifs Étudiants</h2>
+                        <p class="text-sm text-slate-500 mt-1">Répartition globale par niveau d'étude</p>
+                    </div>
+                    <div class="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg text-sm font-semibold">Évolution Continue</div>
+                </div>
+                <div class="h-72 w-full relative">
+                    <canvas id="studentsChart"></canvas>
+                </div>
+                <div class="mt-6 p-4 bg-slate-50 rounded-xl">
+                    <p class="text-sm text-slate-600 leading-relaxed font-medium">Synthèse : Une hausse marquée de the population estudiantine au cycle Licence entre 2024 (10 187) et 2025 (11 915). Le ratio femmes/hommes en licence s'élève à ~62% de femmes en 2025-2026.</p>
+                </div>
+            </div>
+
+            <!-- Section Personnel -->
+            <div class="glass-card rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-display font-bold text-slate-800">Personnel & Parité</h2>
+                        <p class="text-sm text-slate-500 mt-1">Enseignants et administration par genre</p>
+                    </div>
+                    <div class="px-4 py-2 bg-purple-50 text-purple-600 rounded-lg text-sm font-semibold">Analyse RH</div>
+                </div>
+                <div class="h-72 w-full relative">
+                    <canvas id="personnelChart"></canvas>
+                </div>
+                <div class="mt-6 p-4 bg-slate-50 rounded-xl">
+                    <p class="text-sm text-slate-600 leading-relaxed font-medium">Synthèse : Le corps enseignant compte plus du double d'hommes que de femmes, tandis que la parité est très équilibrée dans le staff administratif (45 F, 47 H en 2025/2026).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Infrastructures (Full width) -->
+        <div class="glass-card rounded-3xl p-8">
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                <div>
+                    <h2 class="text-2xl font-display font-bold text-slate-800">Capacités d'Accueil & Infrastructures</h2>
+                    <p class="text-sm text-slate-500 mt-1">Évolution des places physiques disponibles pour les étudiants (Comparatif 2024 vs 2025)</p>
+                </div>
+                <div class="px-4 py-2 bg-amber-50 text-amber-600 rounded-lg text-sm font-semibold">Investissements Locaux</div>
+            </div>
+            <div class="h-96 w-full">
+                <canvas id="capacityChart"></canvas>
+            </div>
+            
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div class="flex items-start p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                    <div class="mt-1 text-emerald-500 mr-4"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                    <div>
+                        <h4 class="font-bold text-emerald-900 mb-1">Grand bond des Salles de TD/TP</h4>
+                        <p class="text-sm text-emerald-800 leading-relaxed">De 2024 à 2025, la capacité des salles de TD est passée de 1 948 à 6 372 places (+227%), et celles des TP a pratiquement doublé (+96%). Un investissement majeur pour l'encadrement pratique des étudiants.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-4 bg-blue-50 rounded-xl border border-blue-100">
+                    <div class="mt-1 text-blue-500 mr-4"><i class="fa-solid fa-circle-info text-xl"></i></div>
+                    <div>
+                        <h4 class="font-bold text-blue-900 mb-1">Stabilité des Amphis et Recherche</h4>
+                        <p class="text-sm text-blue-800 leading-relaxed">Les amphithéâtres maintiennent une capacité robuste de 2 350 places physiques. Les locaux réservés à la recherche scientifique restent stables avec environ 1 410 à 1 434 places dédiées aux laboratoires et équipes de recherche.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-4">
+                <i class="fa-solid fa-flask text-brand-500"></i>
+                <span class="font-display font-semibold text-white tracking-wide">FSSM Analytics</span>
+            </div>
+            <p class="text-sm">Rapport de synthèse statistique généré à partir des bilans Excel et ODS.</p>
+            <p class="text-xs mt-2 opacity-60">Années Universitaires 2024-2025 & 2025-2026. Université Cadi Ayyad.</p>
+        </div>
+    </footer>
+
+    <!-- Chart Configuration Script -->
+    <script>
+        const data = {
+            personnel: {
+                '2024': { Admin: 93, Enseignants: 293 },
+                '2025': { Admin: 92, Enseignants: 261 }
+            },
+            gender: {
+                Admin: { F: 45, H: 47 },
+                Enseignants: { F: 76, H: 184 }
+            },
+            students: {
+                '2024': { Licences: 10187, Masters: 706, Doctorat: 515 },
+                '2025': { Licences: 11915, Masters: 381, Doctorat: 0 } // Doctorat 0 assumes unrecorded yet
+            },
+            capacity: {
+                '2024': { "Salle des cours": 616, "Salles de TP": 2164, "Salles de TD": 1948, "Amphis": 2350, "Recherche": 1434 },
+                '2025': { "Salle des cours": 576, "Salles de TP": 4256, "Salles de TD": 6372, "Amphis": 2350, "Recherche": 1410 }
+            }
+        };
+
+        // Common Chart Defaults
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#64748b';
+        Chart.defaults.scale.grid.color = '#f1f5f9';
+
+        // 1. Students Chart (Bar)
+        new Chart(document.getElementById('studentsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Licences', 'Masters', 'Doctorat'],
+                datasets: [
+                    {
+                        label: '2024-2025',
+                        data: [data.students['2024'].Licences, data.students['2024'].Masters, data.students['2024'].Doctorat],
+                        backgroundColor: '#cbd5e1',
+                        borderRadius: 6
+                    },
+                    {
+                        label: '2025-2026',
+                        data: [data.students['2025'].Licences, data.students['2025'].Masters, data.students['2025'].Doctorat],
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8 } } },
+                scales: { y: { beginAtZero: true, grid: { drawBorder: false } }, x: { grid: { display: false } } }
+            }
+        });
+
+        // 2. Personnel Gender Chart (Doughnut)
+        new Chart(document.getElementById('personnelChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Admin F', 'Admin H', 'Enseignantes', 'Enseignants'],
+                datasets: [{
+                    data: [data.gender.Admin.F, data.gender.Admin.H, data.gender.Enseignants.F, data.gender.Enseignants.H],
+                    backgroundColor: ['#f472b6', '#60a5fa', '#be185d', '#1d4ed8'],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: {
+                    legend: { position: 'right', labels: { usePointStyle: true, boxWidth: 8 } }
+                }
+            }
+        });
+
+        // 3. Infrastructure Capacity Chart (Bar)
+        const labelsCap = Object.keys(data.capacity['2024']);
+        const dataCap24 = labelsCap.map(k => data.capacity['2024'][k]);
+        const dataCap25 = labelsCap.map(k => data.capacity['2025'][k]);
+
+        new Chart(document.getElementById('capacityChart'), {
+            type: 'bar',
+            data: {
+                labels: labelsCap,
+                datasets: [
+                    {
+                        label: 'Capacité 2024-2025',
+                        data: dataCap24,
+                        backgroundColor: '#fde68a', // amber-200
+                        borderRadius: 8
+                    },
+                    {
+                        label: 'Capacité 2025-2026',
+                        data: dataCap25,
+                        backgroundColor: '#d97706', // amber-600
+                        borderRadius: 8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 8 } }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { borderDash: [4, 4], drawBorder: false } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

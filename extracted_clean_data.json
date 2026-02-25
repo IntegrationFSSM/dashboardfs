@@ -1,0 +1,46 @@
+{
+    "personnel": {
+        "2024-2025": {
+            "Admin": 93,
+            "Enseignants": 293
+        },
+        "2025-2026": {
+            "Admin": 92,
+            "Enseignants": 261
+        }
+    },
+    "gender_personnel": {
+        "Admin": {
+            "F": 49,
+            "H": 44
+        },
+        "Enseignants": {
+            "F": 85,
+            "H": 207
+        }
+    },
+    "students_2024": {
+        "Licences": 10187,
+        "Masters": 706,
+        "Doctorat": 515
+    },
+    "students_2025": {
+        "Licences": 11915,
+        "Masters": 381,
+        "Doctorat": 0
+    },
+    "capacity_2024": {
+        "Salle des cours": 616.0,
+        "Salles de TP": 2164.0,
+        "Salles de TD": 1948.0,
+        "Amphis": 2350.0,
+        "Recherche en cours": 1434.0
+    },
+    "capacity_2025": {
+        "Salle des cours": 576.0,
+        "Salles de TP": 4256.0,
+        "Salles de TD": 6372.0,
+        "Amphis": 2350.0,
+        "Recherche": 1410.0
+    }
+}
