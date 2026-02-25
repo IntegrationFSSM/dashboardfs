@@ -44,22 +44,22 @@
     <!-- Header -->
     <header class="relative overflow-hidden bg-slate-900 text-white pb-16 pt-12">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <h1 class="text-4xl md:text-5xl font-display font-extrabold mb-4">
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold mb-4">
                 Bilan Détaillé des Infrastructures 2025-2027<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-maroc-green to-emerald-400">Faculté des Sciences Semlalia</span>
             </h1>
-            <h2 class="text-2xl font-arabic font-bold text-emerald-300 mt-2" dir="rtl">
+            <h2 class="text-xl sm:text-2xl font-arabic font-bold text-emerald-300 mt-2" dir="rtl">
                 المؤسسة: كلية العلوم السملالية - مراكش | البنايات التربوية والبحث العلمي
             </h2>
-            <p class="text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mt-6">
+            <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed mt-6">
                 Analyse exhaustive des capacités d'accueil : Salles de cours, Travaux Pratiques, Travaux Dirigés, Amphithéâtres et Locaux de Recherche.
             </p>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 -mt-8 relative z-20 flex-grow pb-24">
+    <main class="container mx-auto px-4 sm:px-6 -mt-8 relative z-20 flex-grow pb-24">
         
         <!-- KPIs -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Synthèse globale Graphique -->
-        <div class="glass-card rounded-3xl p-8 mb-12">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 mb-12">
             <h2 class="text-2xl font-display font-bold text-slate-800 mb-6">Répartition Globale de la Capacité (الطاقة الاستيعابية)</h2>
             <div class="flex flex-col lg:flex-row items-center gap-8">
                 <div class="w-full lg:w-1/2 h-80 relative">
@@ -262,7 +262,7 @@
     </main>
 
     <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
             <div class="flex justify-center items-center space-x-2 mb-4">
                 <i class="fa-solid fa-chart-pie text-emerald-500"></i>
                 <span class="font-display font-semibold text-white tracking-wide">FSSM Analytics Pro</span>
@@ -296,7 +296,7 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'right', labels: { usePointStyle: true, font: { family: "'Inter', sans-serif" } } }
+                    legend: { position: window.innerWidth < 768 ? 'bottom' : 'right', labels: { usePointStyle: true, font: { family: "'Inter', sans-serif" } } }
                 }
             }
         });

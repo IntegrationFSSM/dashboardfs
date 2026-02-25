@@ -50,23 +50,23 @@
         <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
         <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
         
-        <div class="container mx-auto px-6 relative z-10 text-center">
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center">
             <div class="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-6 ring-1 ring-white/20 backdrop-blur-sm">
                 <i class="fa-solid fa-chart-line text-brand-100 text-xl mr-3"></i>
                 <span class="text-brand-50 font-medium tracking-wide">Université Cadi Ayyad</span>
             </div>
-            <h1 class="text-5xl md:text-7xl font-display font-extrabold mb-6 leading-tight">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-display font-extrabold mb-6 leading-tight">
                 Faculté des Sciences<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-100 to-emerald-300">Semlalia Marrakech</span>
             </h1>
-            <p class="text-xl text-brand-100 max-w-2xl mx-auto font-light leading-relaxed">
+            <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto font-light leading-relaxed">
                 Synthèse exhaustive des capacités d'accueil, du personnel et des effectifs étudiants pour les années universitaires 2024-2025 et 2025-2026.
             </p>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 -mt-16 relative z-20 flex-grow pb-24">
+    <main class="container mx-auto px-4 sm:px-6 -mt-16 relative z-20 flex-grow pb-24">
         
         <!-- Quick Stats Row -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -137,7 +137,7 @@
                     </div>
                     <div class="px-4 py-2 bg-purple-50 text-purple-600 rounded-lg text-sm font-semibold">Analyse RH</div>
                 </div>
-                <div class="h-72 w-full relative">
+                <div class="h-64 sm:h-72 w-full relative">
                     <canvas id="personnelChart"></canvas>
                 </div>
                 <div class="mt-6 p-4 bg-slate-50 rounded-xl">
@@ -147,7 +147,7 @@
         </div>
 
         <!-- Section Infrastructures (Full width) -->
-        <div class="glass-card rounded-3xl p-8">
+        <div class="glass-card rounded-3xl p-6 sm:p-8">
             <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
                 <div>
                     <h2 class="text-2xl font-display font-bold text-slate-800">Capacités d'Accueil & Infrastructures</h2>
@@ -180,7 +180,7 @@
     </main>
 
     <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
             <div class="flex justify-center items-center space-x-2 mb-4">
                 <i class="fa-solid fa-flask text-brand-500"></i>
                 <span class="font-display font-semibold text-white tracking-wide">FSSM Analytics</span>
@@ -261,7 +261,7 @@
                 maintainAspectRatio: false,
                 cutout: '65%',
                 plugins: {
-                    legend: { position: 'right', labels: { usePointStyle: true, boxWidth: 8 } }
+                    legend: { position: window.innerWidth < 768 ? 'bottom' : 'right', labels: { usePointStyle: true, boxWidth: 8 } }
                 }
             }
         });
