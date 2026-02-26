@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilan Filières Numériques 2024-2025</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.6); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
+        .gradient-text { background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-pattern { background-image: radial-gradient(#3b82f6 1px, transparent 1px); background-size: 30px 30px; background-position: 0 0, 15px 15px; background-color: #eff6ff; opacity: 0.8; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-brand-900 text-white pb-24 pt-16">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-6 ring-1 ring-white/20 backdrop-blur-sm">
+                <i class="fa-solid fa-microchip text-brand-100 text-xl mr-3"></i>
+                <span class="text-brand-50 font-medium tracking-wide">Université Cadi Ayyad</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-display font-extrabold mb-6 leading-tight">
+                Filières Numériques<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-brand-300">Transformation Digitale</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto font-light leading-relaxed">
+                Synthèse des effectifs étudiants inscrits dans les parcours digitaux et ingénierie de l'information (Licences & Masters).
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 -mt-16 relative z-20 flex-grow pb-24">
+        
+        <!-- Quick Stats Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1 duration-300 border-l-4 border-l-brand-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Étudiants (IT)</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">1,100</h3>
+                        <p class="text-xs text-brand-600 mt-2 font-medium"><i class="fa-solid fa-graduation-cap mr-1"></i> Formations d'excellence.</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 text-2xl shadow-inner">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1 duration-300 border-l-4 border-l-pink-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Taux de Féminisation</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">47.4%</h3>
+                        <p class="text-xs text-pink-500 mt-2 font-medium"><i class="fa-solid fa-venus mr-1"></i> 521 Étudiantes inscrites.</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-pink-50 flex items-center justify-center text-pink-600 text-2xl shadow-inner">
+                        <i class="fa-solid fa-venus-mars"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 transition-transform hover:-translate-y-1 duration-300 border-l-4 border-l-cyan-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Nouveaux Inscrits</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">333</h3>
+                        <p class="text-xs text-cyan-600 mt-2 font-medium"><i class="fa-solid fa-user-plus mr-1"></i> Entrants en S1 & Master.</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-600 text-2xl shadow-inner">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-8">
+            <!-- Section Filières Globales -->
+            <div class="glass-card rounded-3xl p-8 xl:col-span-2">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-display font-bold text-slate-800">Répartition par Parcours</h2>
+                        <p class="text-sm text-slate-500 mt-1">Effectifs globaux détaillés pour chaque filière numérique</p>
+                    </div>
+                    <div class="px-4 py-2 bg-brand-50 text-brand-600 rounded-lg text-sm font-semibold">Analyse des Spécialités</div>
+                </div>
+                <div class="h-80 w-full relative">
+                    <canvas id="streamsChart"></canvas>
+                </div>
+                <div class="mt-6 p-4 bg-slate-50 rounded-xl flex gap-4 text-sm font-medium text-slate-600">
+                    <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-md mb-2 inline-block">Licences</div>
+                    <p class="leading-relaxed text-xs">
+                        Sciences Informatiques (SI), Ingénierie des Systèmes d'Information (ISI), Intelligence Artificielle et Sciences des Données (IASD), Networking, Système et Cybersécurité (NSC).
+                    </p>
+                </div>
+                <div class="mt-2 p-4 bg-slate-50 rounded-xl flex gap-4 text-sm font-medium text-slate-600">
+                    <div class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-md mb-2 inline-block">Masters</div>
+                    <p class="leading-relaxed text-xs">
+                        Intelligence Artificielle (IA), Ingénierie des Systèmes d'Information (ISI).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section Parité Genre -->
+            <div class="glass-card rounded-3xl p-8">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-display font-bold text-slate-800">Parité Genre</h2>
+                        <p class="text-sm text-slate-500 mt-1">Équilibre Femmes/Hommes</p>
+                    </div>
+                </div>
+                <div class="h-64 sm:h-72 w-full relative">
+                    <canvas id="genderChart"></canvas>
+                </div>
+                <div class="mt-6 p-4 bg-pink-50 rounded-xl border border-pink-100">
+                    <p class="text-sm text-pink-900 leading-relaxed font-medium">L'intégration notable des étudiantes dans les parcours digitaux traduit une forte attractivité des filières IT, avec presque une parité atteinte (47.4% de femmes).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section détaillée Cycles -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8">
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                <div>
+                    <h2 class="text-2xl font-display font-bold text-slate-800">Détails des Inscriptions & Nouveaux Entrants</h2>
+                    <p class="text-sm text-slate-500 mt-1">Comparatif d'attractivité des filières pour l'année courante</p>
+                </div>
+                <div class="px-4 py-2 bg-emerald-50 text-emerald-600 rounded-lg text-sm font-semibold">Performances & Inscriptions</div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="h-72 w-full">
+                    <canvas id="newStudentsChart"></canvas>
+                </div>
+                
+                <div class="flex flex-col justify-center space-y-4">
+                     <div class="flex items-start p-4 bg-blue-50 rounded-xl border border-blue-100">
+                        <div class="mt-1 text-blue-500 mr-4"><i class="fa-solid fa-layer-group text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-blue-900 mb-1">Prédominance des Troncs Communs</h4>
+                            <p class="text-sm text-blue-800 leading-relaxed">Les parcours Informatique Appliquée (IAP) et Sciences Informatiques (S-Info) en S1 et S3 regroupent the grande majorité des effectifs du cycle licence (735 étudiants combinés).</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                        <div class="mt-1 text-indigo-500 mr-4"><i class="fa-solid fa-brain text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-indigo-900 mb-1">L'Intelligence Artificielle très prisée</h4>
+                            <p class="text-sm text-indigo-800 leading-relaxed">Le Master en Intelligence Artificielle (IA) comptabilise 81 étudiants avec une majorité nette de femmes (49 étudiantes). Près de 45 nouveaux étudiants ont rejoint ce Master cette année.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-4">
+                <i class="fa-solid fa-shield-halved text-brand-500"></i>
+                <span class="font-display font-semibold text-white tracking-wide">FSSM Numérique</span>
+            </div>
+            <p class="text-sm">Rapport de synthèse statistique : Effectifs des filières digitales.</p>
+            <p class="text-xs mt-2 opacity-60">Programme de renforcement des ressources universitaires en digitalisation.</p>
+        </div>
+    </footer>
+
+    <!-- Chart Configuration Script -->
+    <script>
+        // Data Extraction
+        const streamsData = {
+            labels: ['IAP/S1', 'IAP/S3', 'S-Info/S3', 'NSC/S5', 'ISI/S5', 'IASD/S5', 'S-Info/S5', 'Master ISI', 'Master IA'],
+            total: [275, 250, 210, 35, 34, 41, 100, 74, 81],
+            female: [120, 117, 95, 11, 20, 23, 52, 34, 49]
+        };
+
+        const maleData = streamsData.total.map((t, i) => t - streamsData.female[i]);
+
+        const newStudentsData = {
+            labels: ['Licence IAP/S1', 'Master ISI', 'Master IA'],
+            total: [260, 28, 45],
+            female: [113, 10, 26]
+        };
+
+        const newMaleData = newStudentsData.total.map((t, i) => t - newStudentsData.female[i]);
+
+        // Common Chart Defaults
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#64748b';
+        Chart.defaults.scale.grid.color = '#f1f5f9';
+
+        // 1. Streams Chart (Stacked Bar)
+        new Chart(document.getElementById('streamsChart'), {
+            type: 'bar',
+            data: {
+                labels: streamsData.labels,
+                datasets: [
+                    {
+                        label: 'Femmes',
+                        data: streamsData.female,
+                        backgroundColor: '#f472b6', // pink-400
+                        borderRadius: {topLeft: 0, topRight: 0, bottomLeft: 4, bottomRight: 4}
+                    },
+                    {
+                        label: 'Hommes',
+                        data: maleData,
+                        backgroundColor: '#60a5fa', // blue-400
+                        borderRadius: {topLeft: 4, topRight: 4, bottomLeft: 0, bottomRight: 0}
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 8 } } },
+                scales: { 
+                    y: { stacked: true, beginAtZero: true, grid: { drawBorder: false } }, 
+                    x: { stacked: true, grid: { display: false } } 
+                }
+            }
+        });
+
+        // 2. Total Gender Chart (Doughnut)
+        new Chart(document.getElementById('genderChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Étudiantes (Femmes)', 'Étudiants (Hommes)'],
+                datasets: [{
+                    data: [521, 579],
+                    backgroundColor: ['#ec4899', '#3b82f6'], // pink-500, blue-500
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                plugins: {
+                    legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, padding: 20 } }
+                }
+            }
+        });
+
+        // 3. New Students Chart (Bar)
+        new Chart(document.getElementById('newStudentsChart'), {
+            type: 'bar',
+            data: {
+                labels: newStudentsData.labels,
+                datasets: [
+                    {
+                        label: 'Nouvelles Étudiantes',
+                        data: newStudentsData.female,
+                        backgroundColor: '#fbcfe8', // pink-200
+                        borderColor: '#ec4899', // pink-500
+                        borderWidth: 1,
+                        borderRadius: 6
+                    },
+                    {
+                        label: 'Nouveaux Étudiants',
+                        data: newMaleData,
+                        backgroundColor: '#bfdbfe', // blue-200
+                        borderColor: '#3b82f6', // blue-500
+                        borderWidth: 1,
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 8 } },
+                    title: { display: true, text: 'Nouveaux Inscrits (Entrants)', font: { size: 14, family: "'Outfit', sans-serif" } }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { borderDash: [4, 4], drawBorder: false } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
