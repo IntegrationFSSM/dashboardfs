@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilan Langues et Power Skills 2024-2025</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(226, 232, 240, 0.6); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .glass-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px -10px rgba(0,0,0,0.1); }
+        .gradient-text { background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-brand-900 text-white pb-24 pt-16 shadow-lg">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <div class="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-6 ring-1 ring-white/20 backdrop-blur-sm shadow-inner transition-transform hover:scale-105 duration-300">
+                <i class="fa-solid fa-language text-brand-100 text-xl mr-3"></i>
+                <span class="text-brand-50 font-medium tracking-wide">Université Cadi Ayyad</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-display font-extrabold mb-6 leading-tight drop-shadow-md">
+                Modules Transversaux<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-500">Langues & Power Skills</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto font-light leading-relaxed">
+                Synthèse des effectifs étudiants inscrits aux modules de langues et power skills pour l'année universitaire 2024-2025.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 -mt-16 relative z-20 flex-grow pb-24">
+        
+        <!-- Quick Stats Row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-l-brand-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Inscrits (Langues)</p>
+                        <h3 class="text-4xl font-display font-bold text-slate-800">29,072</h3>
+                        <p class="text-xs text-brand-600 mt-2 font-medium"><i class="fa-solid fa-users mr-1"></i> Étudiants au total.</p>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 text-3xl shadow-inner">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-l-amber-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Inscrits (Power Skills)</p>
+                        <h3 class="text-4xl font-display font-bold text-slate-800">28,904</h3>
+                        <p class="text-xs text-amber-600 mt-2 font-medium"><i class="fa-solid fa-lightbulb mr-1"></i> Développement personnel.</p>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 text-3xl shadow-inner">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-l-pink-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Taux de Féminisation</p>
+                        <h3 class="text-4xl font-display font-bold text-slate-800">59.6%</h3>
+                        <p class="text-xs text-pink-500 mt-2 font-medium"><i class="fa-solid fa-venus mr-1"></i> 17,338 Étudiantes en Langues.</p>
+                    </div>
+                    <div class="w-16 h-16 rounded-full bg-pink-50 flex items-center justify-center text-pink-600 text-3xl shadow-inner">
+                        <i class="fa-solid fa-venus-mars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 mb-8">
+            <!-- Section Filières Globales -->
+            <div class="glass-card rounded-3xl p-8 xl:col-span-2 shadow-sm">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-display font-bold text-slate-800">Top 10 : Répartition par Filière</h2>
+                        <p class="text-sm text-slate-500 mt-1">Comparatif des inscriptions Langues vs Power Skills</p>
+                    </div>
+                    <div class="px-4 py-2 bg-brand-50 text-brand-600 rounded-lg text-sm font-semibold shadow-sm">Vue Détaillée</div>
+                </div>
+                <!-- Interactive Chart Container -->
+                <div class="h-80 w-full relative">
+                    <canvas id="topFilieresChart"></canvas>
+                </div>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl flex gap-3 text-sm font-medium text-slate-600 border border-slate-100">
+                        <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-md self-start"><i class="fa-solid fa-chart-line"></i></div>
+                        <p class="leading-relaxed text-xs">
+                            Les troncs communs du cycle licence (BCG, MIP, PC S1-S2) dominent les effectifs, regroupant plus de 7,000 étudiants inscrits aux modules transversaux.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl flex gap-3 text-sm font-medium text-slate-600 border border-slate-100">
+                        <div class="bg-amber-100 text-amber-800 px-3 py-1 rounded-md self-start"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <p class="leading-relaxed text-xs">
+                            L'écart entre le nombre d'inscrits en Langues et en Power Skills reste minime, démontrant l'engagement des étudiants dans les deux domaines.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Parité Genre -->
+            <div class="glass-card rounded-3xl p-8 shadow-sm">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="text-2xl font-display font-bold text-slate-800">Parité (Langues)</h2>
+                        <p class="text-sm text-slate-500 mt-1">Répartition Femmes / Hommes</p>
+                    </div>
+                </div>
+                <div class="h-64 sm:h-72 w-full relative">
+                    <canvas id="genderLanguesChart"></canvas>
+                </div>
+                <div class="mt-6 p-4 bg-pink-50 rounded-xl border border-pink-100 shadow-sm transition hover:bg-pink-100 duration-300">
+                    <p class="text-sm text-pink-900 leading-relaxed font-medium">
+                        Une forte représentation féminine est observée avec près de 60% d'étudiantes parmi les effectifs totaux des modules de langues.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section détaillée Cycles -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-sm">
+            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
+                <div>
+                    <h2 class="text-2xl font-display font-bold text-slate-800">Focus : Analyse Genre pour les Power Skills</h2>
+                    <p class="text-sm text-slate-500 mt-1">Comparaison des inscriptions masculines et féminines</p>
+                </div>
+                <div class="px-4 py-2 bg-emerald-50 text-emerald-600 rounded-lg text-sm font-semibold shadow-sm">Mixité & Inclusion</div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="h-72 w-full relative">
+                    <canvas id="genderPowerSkillsChart"></canvas>
+                </div>
+                
+                <div class="flex flex-col justify-center space-y-5">
+                     <div class="flex items-start p-5 bg-amber-50 rounded-xl border border-amber-100 shadow-sm transition hover:-translate-y-1 duration-300">
+                        <div class="mt-1 text-amber-500 mr-4 bg-white p-2 rounded-lg shadow-sm"><i class="fa-solid fa-handshake-angle text-2xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-amber-900 mb-2 font-display text-lg">Intérêt Marqué pour le Développement</h4>
+                            <p class="text-sm text-amber-800 leading-relaxed">Les statistiques montrent que 17,276 étudiantes sont inscrites en modules "Power Skills", affirmant une volonté de renforcer les compétences transversales et l'employabilité.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-5 bg-blue-50 rounded-xl border border-blue-100 shadow-sm transition hover:-translate-y-1 duration-300">
+                        <div class="mt-1 text-blue-500 mr-4 bg-white p-2 rounded-lg shadow-sm"><i class="fa-solid fa-chart-pie text-2xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-blue-900 mb-2 font-display text-lg">Proportions Homogènes</h4>
+                            <p class="text-sm text-blue-800 leading-relaxed">Les proportions hommes/femmes en Power Skills copient presque parfaitement celles des Langues, indiquant que les étudiants suivent en grande partie les deux modules conjointement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 mt-auto">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <div class="flex justify-center items-center space-x-3 mb-6">
+                <div class="bg-gray-800 p-2 rounded-full"><i class="fa-solid fa-building-columns text-brand-500"></i></div>
+                <span class="font-display font-semibold text-white tracking-wide text-lg">FSSM - Statistiques Académiques</span>
+            </div>
+            <p class="text-sm mb-2">Rapport de synthèse statistique : Effectifs des modules transversaux (Langues & Power Skills).</p>
+            <p class="text-xs opacity-60">Généré dynamiquement à partir des données officielles 2024-2025.</p>
+        </div>
+    </footer>
+
+    <!-- Chart Configuration Script -->
+    <script>
+        // Data Extraction
+        const topFilieres = ['BCG S1-S2', 'MIP S1-S2', 'PC S1-S2', 'BIO S3-S4', 'PHY S3-S4', 'CHI S3-S4', 'MAT S3-S4', 'IAP S3-S4', 'INFO S1-S2', 'INF S3-S4'];
+        const languesData = [3347, 2198, 1785, 1733, 1166, 793, 618, 416, 344, 273];
+        const psData = [3536, 2307, 1814, 1609, 1022, 759, 548, 391, 353, 273];
+
+        // Common Chart Defaults
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#64748b';
+        Chart.defaults.scale.grid.color = '#f1f5f9';
+        Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(15, 23, 42, 0.9)';
+        Chart.defaults.plugins.tooltip.padding = 10;
+        Chart.defaults.plugins.tooltip.cornerRadius = 8;
+
+        // 1. Top Filieres Chart (Bar)
+        new Chart(document.getElementById('topFilieresChart'), {
+            type: 'bar',
+            data: {
+                labels: topFilieres,
+                datasets: [
+                    {
+                        label: 'Langues',
+                        data: languesData,
+                        backgroundColor: '#3b82f6', // blue-500
+                        borderRadius: 6,
+                        barPercentage: 0.7,
+                        categoryPercentage: 0.8
+                    },
+                    {
+                        label: 'Power Skills',
+                        data: psData,
+                        backgroundColor: '#f59e0b', // amber-500
+                        borderRadius: 6,
+                        barPercentage: 0.7,
+                        categoryPercentage: 0.8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 8, font: { weight: '500' } } } 
+                },
+                scales: { 
+                    y: { beginAtZero: true, grid: { borderDash: [4, 4], drawBorder: false } }, 
+                    x: { grid: { display: false } } 
+                },
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                }
+            }
+        });
+
+        // 2. Total Gender Chart Langues (Doughnut)
+        new Chart(document.getElementById('genderLanguesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Femmes', 'Hommes'],
+                datasets: [{
+                    data: [17338, 11734],
+                    backgroundColor: ['#ec4899', '#3b82f6'], // pink-500, blue-500
+                    borderWidth: 2,
+                    borderColor: '#ffffff',
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '75%',
+                plugins: {
+                    legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, padding: 25, font: { weight: '500' } } }
+                }
+            }
+        });
+
+        // 3. Gender Power Skills Chart (Bar)
+        new Chart(document.getElementById('genderPowerSkillsChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Effectifs Power Skills'],
+                datasets: [
+                    {
+                        label: 'Femmes',
+                        data: [17276],
+                        backgroundColor: '#fbcfe8', // pink-200
+                        borderColor: '#ec4899', // pink-500
+                        borderWidth: 2,
+                        borderRadius: 8
+                    },
+                    {
+                        label: 'Hommes',
+                        data: [11628],
+                        backgroundColor: '#bfdbfe', // blue-200
+                        borderColor: '#3b82f6', // blue-500
+                        borderWidth: 2,
+                        borderRadius: 8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { position: 'top', labels: { usePointStyle: true, boxWidth: 8, font: { weight: '500' } } },
+                },
+                scales: {
+                    x: { beginAtZero: true, grid: { borderDash: [4, 4], drawBorder: false } },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

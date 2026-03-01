@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-file_path = r'c:\Users\yassi\OneDrive\Bureau\bilan\Stat- filière digitale.xlsx'
+file_path = r'c:\Users\yassi\OneDrive\Bureau\bilan\Stat-langues et power skills.xlsx'
 xls = pd.ExcelFile(file_path)
 
 out = {}

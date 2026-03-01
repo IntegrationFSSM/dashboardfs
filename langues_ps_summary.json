@@ -1,0 +1,278 @@
+{
+  "quick_stats": {
+    "total_langues": 29072,
+    "total_langues_f": 17338,
+    "total_langues_m": 11734,
+    "total_ps": 28904,
+    "total_ps_f": 17276,
+    "total_ps_m": 11628
+  },
+  "filiere_stats": [
+    {
+      "filiere": "Filière",
+      "langues_total": 0,
+      "langues_f": 0,
+      "ps_total": 0,
+      "ps_f": 0
+    },
+    {
+      "filiere": "PE 3EV",
+      "langues_total": 115,
+      "langues_f": 50,
+      "ps_total": 115,
+      "ps_f": 50
+    },
+    {
+      "filiere": "PE AMQ",
+      "langues_total": 118,
+      "langues_f": 52,
+      "ps_total": 118,
+      "ps_f": 52
+    },
+    {
+      "filiere": "PE ICBTP",
+      "langues_total": 178,
+      "langues_f": 92,
+      "ps_total": 180,
+      "ps_f": 92
+    },
+    {
+      "filiere": "PE STDESS",
+      "langues_total": 86,
+      "langues_f": 52,
+      "ps_total": 86,
+      "ps_f": 52
+    },
+    {
+      "filiere": "PE VALDEC",
+      "langues_total": 163,
+      "langues_f": 126,
+      "ps_total": 163,
+      "ps_f": 126
+    },
+    {
+      "filiere": "BIO S3-S4",
+      "langues_total": 1733,
+      "langues_f": 1319,
+      "ps_total": 1609,
+      "ps_f": 1225
+    },
+    {
+      "filiere": "CHI S3-S4",
+      "langues_total": 793,
+      "langues_f": 556,
+      "ps_total": 759,
+      "ps_f": 533
+    },
+    {
+      "filiere": "GEO S3-S4",
+      "langues_total": 104,
+      "langues_f": 48,
+      "ps_total": 82,
+      "ps_f": 37
+    },
+    {
+      "filiere": "IAP S3-S4",
+      "langues_total": 416,
+      "langues_f": 195,
+      "ps_total": 391,
+      "ps_f": 183
+    },
+    {
+      "filiere": "MAT S3-S4",
+      "langues_total": 618,
+      "langues_f": 202,
+      "ps_total": 548,
+      "ps_f": 180
+    },
+    {
+      "filiere": "PHY S3-S4",
+      "langues_total": 1166,
+      "langues_f": 643,
+      "ps_total": 1022,
+      "ps_f": 564
+    },
+    {
+      "filiere": "INF S3-S4",
+      "langues_total": 273,
+      "langues_f": 128,
+      "ps_total": 273,
+      "ps_f": 128
+    },
+    {
+      "filiere": "BCG S1-S2",
+      "langues_total": 3347,
+      "langues_f": 2548,
+      "ps_total": 3536,
+      "ps_f": 2692
+    },
+    {
+      "filiere": "INFO S1-S2",
+      "langues_total": 344,
+      "langues_f": 162,
+      "ps_total": 353,
+      "ps_f": 165
+    },
+    {
+      "filiere": "MIP S1-S2",
+      "langues_total": 2198,
+      "langues_f": 969,
+      "ps_total": 2307,
+      "ps_f": 1017
+    },
+    {
+      "filiere": "PC S1-S2",
+      "langues_total": 1785,
+      "langues_f": 984,
+      "ps_total": 1814,
+      "ps_f": 1001
+    },
+    {
+      "filiere": "Totaux automne",
+      "langues_total": 7456,
+      "langues_f": 4460,
+      "ps_total": 7362,
+      "ps_f": 4397
+    },
+    {
+      "filiere": "Totaux printemps",
+      "langues_total": 6853,
+      "langues_f": 4096,
+      "ps_total": 6855,
+      "ps_f": 4127
+    },
+    {
+      "filiere": "BIOCLIMADD",
+      "langues_total": 20,
+      "langues_f": 15,
+      "ps_total": 20,
+      "ps_f": 15
+    },
+    {
+      "filiere": "BMAG",
+      "langues_total": 20,
+      "langues_f": 14,
+      "ps_total": 22,
+      "ps_f": 13
+    },
+    {
+      "filiere": "CMI",
+      "langues_total": 13,
+      "langues_f": 8,
+      "ps_total": 13,
+      "ps_f": 8
+    },
+    {
+      "filiere": "COSIS",
+      "langues_total": 14,
+      "langues_f": 10,
+      "ps_total": 17,
+      "ps_f": 12
+    },
+    {
+      "filiere": "IMQ",
+      "langues_total": 83,
+      "langues_f": 41,
+      "ps_total": 82,
+      "ps_f": 40
+    },
+    {
+      "filiere": "4GEO",
+      "langues_total": 82,
+      "langues_f": 47,
+      "ps_total": 82,
+      "ps_f": 48
+    },
+    {
+      "filiere": "GARMINE",
+      "langues_total": 61,
+      "langues_f": 18,
+      "ps_total": 61,
+      "ps_f": 18
+    },
+    {
+      "filiere": "ISI",
+      "langues_total": 112,
+      "langues_f": 54,
+      "ps_total": 107,
+      "ps_f": 52
+    },
+    {
+      "filiere": "SD",
+      "langues_total": 29,
+      "langues_f": 11,
+      "ps_total": 30,
+      "ps_f": 11
+    },
+    {
+      "filiere": "SMA",
+      "langues_total": 46,
+      "langues_f": 13,
+      "ps_total": 46,
+      "ps_f": 13
+    },
+    {
+      "filiere": "C2I2S",
+      "langues_total": 100,
+      "langues_f": 32,
+      "ps_total": 98,
+      "ps_f": 32
+    },
+    {
+      "filiere": "EnEn",
+      "langues_total": 65,
+      "langues_f": 15,
+      "ps_total": 64,
+      "ps_f": 14
+    },
+    {
+      "filiere": "Totaux",
+      "langues_total": 227,
+      "langues_f": 113,
+      "ps_total": 235,
+      "ps_f": 114
+    },
+    {
+      "filiere": "CMOI",
+      "langues_total": 61,
+      "langues_f": 29,
+      "ps_total": 61,
+      "ps_f": 29
+    },
+    {
+      "filiere": "INGVAD",
+      "langues_total": 76,
+      "langues_f": 52,
+      "ps_total": 76,
+      "ps_f": 52
+    },
+    {
+      "filiere": "IPAC",
+      "langues_total": 106,
+      "langues_f": 88,
+      "ps_total": 106,
+      "ps_f": 88
+    },
+    {
+      "filiere": "ICPCD",
+      "langues_total": 80,
+      "langues_f": 30,
+      "ps_total": 80,
+      "ps_f": 30
+    },
+    {
+      "filiere": "IA",
+      "langues_total": 74,
+      "langues_f": 48,
+      "ps_total": 74,
+      "ps_f": 48
+    },
+    {
+      "filiere": "PAHEA2S",
+      "langues_total": 57,
+      "langues_f": 18,
+      "ps_total": 57,
+      "ps_f": 18
+    }
+  ]
+}
