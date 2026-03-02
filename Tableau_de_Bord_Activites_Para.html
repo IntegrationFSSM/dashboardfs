@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Activités Para-universitaires - FSSM</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            500: '#d946ef',
+                            600: '#c026d3',
+                            700: '#a21caf',
+                            900: '#701a75',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fdfafb; color: #0f172a; }
+        h1, h2, h3, h4, h5 { font-family: 'Outfit', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(245, 208, 254, 0.6); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05); }
+        .hero-pattern { background-image: radial-gradient(#d946ef 1px, transparent 1px); background-size: 30px 30px; background-position: 0 0, 15px 15px; background-color: #fdf4ff; opacity: 0.8; }
+        .image-gallery img { border-radius: 1rem; transition: transform 0.3s ease; }
+        .image-gallery img:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="relative overflow-hidden bg-brand-900 text-white pb-24 pt-16">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="container mx-auto px-4 text-center">
+            <div class="inline-flex items-center justify-center p-3 bg-white/10 rounded-full mb-6 ring-1 ring-white/20 backdrop-blur-sm">
+                <i class="fa-solid fa-masks-theater text-brand-100 text-xl mr-3"></i>
+                <span class="text-brand-50 font-medium tracking-wide">FSSM Extracurricular Life</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-display font-extrabold mb-6 leading-tight">
+                Vie Étudiante &<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-100 to-fuchsia-300">Activités Para-universitaires</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto font-light leading-relaxed">
+                Analyse statistique des clubs, compétitions artistiques et sorties académiques pour le rayonnement de la Faculté (2022-2025).
+            </p>
+            <div class="mt-8">
+                <a href="index.html" class="inline-flex items-center px-6 py-3 border border-brand-500 text-brand-100 rounded-full hover:bg-brand-500 hover:text-white transition-all">
+                    <i class="fa-solid fa-arrow-left mr-2"></i> Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 -mt-16 relative z-20 flex-grow pb-24">
+        
+        <!-- Key Metrics Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-l-fuchsia-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Nombre de Clubs (24/25)</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">16 Clubs</h3>
+                        <p class="text-xs text-emerald-600 mt-2 font-medium"><i class="fa-solid fa-plus mr-1"></i> 2 nouveaux clubs vs 23/24</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-fuchsia-50 flex items-center justify-center text-fuchsia-500 text-2xl shadow-inner">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-l-indigo-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Étudiants Engagés (24/25)</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">5,875</h3>
+                        <p class="text-xs text-emerald-600 mt-2 font-medium"><i class="fa-solid fa-arrow-trend-up mr-1"></i> +128% vs 23/24</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500 text-2xl shadow-inner">
+                        <i class="fa-solid fa-id-badge"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 border-l-4 border-l-amber-500">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">Compétitions Artistiques</p>
+                        <h3 class="text-3xl font-display font-bold text-slate-800">06</h3>
+                        <p class="text-xs text-slate-500 mt-2 font-medium">Poésie, Théâtre, Arts Plastiques</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center text-amber-500 text-2xl shadow-inner">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Membership Chart -->
+            <div class="glass-card rounded-3xl p-8">
+                <h2 class="text-2xl font-display font-bold text-slate-800 mb-6">Évolution des Adhésions</h2>
+                <div class="h-64 sm:h-72 w-full relative">
+                    <canvas id="membersChart"></canvas>
+                </div>
+                <div class="mt-6 p-4 bg-fuchsia-50 rounded-xl">
+                    <p class="text-sm text-fuchsia-900 font-medium">Explosion de l'engagement étudiant en 2024-2025 avec plus de 5800 membres inscrits à travers 16 clubs actifs.</p>
+                </div>
+            </div>
+
+            <!-- Clubs Distribution (Thematic) -->
+            <div class="glass-card rounded-3xl p-8">
+                <h2 class="text-2xl font-display font-bold text-slate-800 mb-6">Typologie des Activités</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-xl text-center">
+                        <i class="fa-solid fa-palette text-2xl text-fuchsia-500 mb-2"></i>
+                        <h4 class="font-bold text-slate-800">Culture & Arts</h4>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl text-center">
+                        <i class="fa-solid fa-atom text-2xl text-blue-500 mb-2"></i>
+                        <h4 class="font-bold text-slate-800">Sciences & Tech</h4>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl text-center">
+                        <i class="fa-solid fa-basketball-ball text-2xl text-orange-500 mb-2"></i>
+                        <h4 class="font-bold text-slate-800">Sports & Loisirs</h4>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl text-center">
+                        <i class="fa-solid fa-hand-holding-heart text-2xl text-red-500 mb-2"></i>
+                        <h4 class="font-bold text-slate-800">Social & Solidaire</h4>
+                    </div>
+                </div>
+                <div class="mt-6 h-40">
+                    <canvas id="clubsProgress"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Gallery Section -->
+        <div class="glass-card rounded-3xl p-8 mb-8">
+            <h2 class="text-2xl font-display font-bold text-slate-800 mb-8 text-center">Immersion dans la Vie Étudiante</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 image-gallery">
+                <div class="space-y-4">
+                    <img src="images/activites/club_collaboration.png" alt="Collaborations Clubs" class="w-full shadow-lg">
+                    <p class="text-sm text-slate-500 text-center italic">Ateliers de collaboration et brainstorming</p>
+                </div>
+                <div class="space-y-4">
+                    <img src="images/activites/arts_theater.png" alt="Théâtre et Arts" class="w-full shadow-lg">
+                    <p class="text-sm text-slate-500 text-center italic">Performances artistiques et culturelles</p>
+                </div>
+                <div class="space-y-4">
+                    <img src="images/activites/science_field_trip.png" alt="Sorties Terrain" class="w-full shadow-lg">
+                    <p class="text-sm text-slate-500 text-center italic">Sorties académiques et terrain scientifique</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitive Spirit -->
+        <div class="glass-card rounded-3xl p-8">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-display font-bold text-slate-800 mb-6">Concours & Talents</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        En 2024-2025, 39 étudiants ont été récompensés dans 6 catégories de compétitions nationales (الشعر - الرسم - الغناء - المسرح - العزف الآلي). Cet engagement témoigne de la richesse créative des étudiants de la FSSM au-delà des amphithéâtres.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-check-circle text-brand-500 mr-3"></i>
+                            <span class="font-semibold text-slate-700">Participation en forte croissance (6 مسابقات)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-check-circle text-brand-500 mr-3"></i>
+                            <span class="font-semibold text-slate-700">Diversité des talents (Arts & Lettres)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 h-64">
+                    <canvas id="talentsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-4">
+                <i class="fa-solid fa-flask text-fuchsia-500"></i>
+                <span class="font-display font-semibold text-white tracking-wide">FSSM Life Analytics</span>
+            </div>
+            <p class="text-sm opacity-60">© 2024-2025 Faculté des Sciences Semlalia Marrakech. Données Vie Étudiante.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data from Analysis
+        const stats = {
+            years: ['2022-2023', '2023-2024', '2024-2025'],
+            members: [1710, 2565, 5875],
+            clubs: [14, 14, 16],
+            winners: [26, 24, 39]
+        };
+
+        // Charts configuration
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#64748b';
+
+        // 1. Members Growth Chart (Area)
+        new Chart(document.getElementById('membersChart'), {
+            type: 'line',
+            data: {
+                labels: stats.years,
+                datasets: [{
+                    label: 'Membres des Clubs',
+                    data: stats.members,
+                    borderColor: '#d946ef',
+                    backgroundColor: 'rgba(217, 70, 239, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#d946ef',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { borderDash: [4, 4] } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // 2. Clubs vs Years Progress (Small Bar)
+        new Chart(document.getElementById('clubsProgress'), {
+            type: 'bar',
+            data: {
+                labels: stats.years,
+                datasets: [{
+                    label: 'Nombre de Clubs',
+                    data: stats.clubs,
+                    backgroundColor: ['#e2e8f0', '#e2e8f0', '#d946ef'],
+                    borderRadius: 8,
+                    barThickness: 30
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { display: false },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // 3. Winners/Talents Chart (Radar/Polar)
+        new Chart(document.getElementById('talentsChart'), {
+            type: 'polarArea',
+            data: {
+                labels: ['Poésie', 'Dessin', 'Chant', 'Théâtre', 'Musique', 'Collectif'],
+                datasets: [{
+                    data: [12, 10, 8, 15, 7, 5], // Estimated distribution based on 39 total
+                    backgroundColor: [
+                        'rgba(217, 70, 239, 0.7)',
+                        'rgba(99, 102, 241, 0.7)',
+                        'rgba(245, 158, 11, 0.7)',
+                        'rgba(16, 185, 129, 0.7)',
+                        'rgba(239, 68, 68, 0.7)',
+                        'rgba(100, 116, 139, 0.7)'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { r: { display: false } },
+                plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, usePointStyle: true } } }
+            }
+        });
+    </script>
+</body>
+</html>

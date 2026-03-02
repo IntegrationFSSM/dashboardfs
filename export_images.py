@@ -19,7 +19,8 @@ def export_dashboards():
         "Tableau_de_Bord_FSSM.html",
         "Tableau_de_Bord_Filiere_Digitale.html",
         "Bilan_Detaille_Infrastructures.html",
-        "Tableau_de_Bord_Langues_Power_Skills.html"
+        "Tableau_de_Bord_Langues_Power_Skills.html",
+        "Tableau_de_Bord_Activites_Para.html"
     ]
     
     with sync_playwright() as p:
