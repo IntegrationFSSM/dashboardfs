@@ -9,17 +9,13 @@ except ImportError:
     sys.exit(1)
 
 def export_dashboards():
-    base_dir = r"c:\Users\yassi\OneDrive\Bureau\bilan"
+    base_dir = r"c:\Users\yassi\OneDrive\Bureau\NON TRIEe\bilan"
     output_dir = os.path.join(base_dir, "Images_Dashboards")
     
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         
     html_files = [
-        "Tableau_de_Bord_FSSM.html",
-        "Tableau_de_Bord_Filiere_Digitale.html",
-        "Bilan_Detaille_Infrastructures.html",
-        "Tableau_de_Bord_Langues_Power_Skills.html",
         "Tableau_de_Bord_Activites_Para.html"
     ]
     
